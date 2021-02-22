@@ -45,12 +45,12 @@ public class PlayerFire : MonoBehaviour
         if (iceClimber.flipX)
         {
             Projectiles projectileInstance = Instantiate(projectilePrefab, spawnPointLeft.position, spawnPointLeft.rotation);
-            projectileInstance.speed = projectileSpeed * -1;
+            projectileInstance.speed = projectileSpeed;
         }
         else
         {
             Projectiles projectileInstance = Instantiate(projectilePrefab, spawnPointRight.position, spawnPointRight.rotation);
-            projectileInstance.speed = projectileSpeed;
+            projectileInstance.speed = projectileSpeed * -1;
         }
     }
 }
