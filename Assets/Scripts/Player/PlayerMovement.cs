@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator JumpforceChange()
     {
-        int jumpForce = 500;
+        int jumpForce = 800;
         yield return new WaitForSeconds(2.0f);
         jumpForce = 300;
     }
