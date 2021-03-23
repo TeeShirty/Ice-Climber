@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: d6af18fc4c06b604f906df77def75801
+guid: 2569673f5516d744db41fba0c9fc5787
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8633881525917383573
-    second: Idle
+    second: IceClimber_Idle
   - first:
       213: -1771866121167276815
-    second: Run_1
+    second: IceClimber_Walk1
   - first:
       213: 2091829175261615561
-    second: Run_2
+    second: IceClimber_Walk2
   - first:
       213: 756911166660455246
-    second: Run_3
+    second: IceClimber_Walk3
   - first:
       213: 403005533434085257
     second: Spritesheet_4
   - first:
       213: 6961653080833796888
-    second: Attack_1
+    second: IceClimber_Attack1
   - first:
       213: 6266472923241529454
-    second: Spritesheet_6
+    second: IceClimber_Jump1
   - first:
       213: -5282911695883833476
-    second: Attack_3
+    second: IceClimber_Attack2
   - first:
       213: 7021449457718125206
-    second: Attack_4
+    second: IceClimber_Attack3
   - first:
       213: 7357123456376359846
-    second: Attack_2
+    second: Spritesheet_9
   - first:
       213: -7343860702648896561
-    second: Jump_2
+    second: Spritesheet_10
   - first:
       213: -3531878321590394162
     second: Spritesheet_11
@@ -61,10 +61,10 @@ TextureImporter:
     second: Spritesheet_18
   - first:
       213: 8527111519951476930
-    second: Spritesheet_19
+    second: IceClimber_Death1
   - first:
       213: -7490898752223310767
-    second: Spritesheet_20
+    second: IceClimber_Death2
   - first:
       213: 6288659706726585256
     second: Spritesheet_21
@@ -88,16 +88,16 @@ TextureImporter:
     second: Spritesheet_27
   - first:
       213: 4123474909421625494
-    second: Spritesheet_28
+    second: Enemy_Walk1
   - first:
       213: 4583289673117313467
-    second: Spritesheet_29
+    second: Enemy_Walk2
   - first:
       213: 5399601884874693798
-    second: Spritesheet_30
+    second: Enemy_Walk3
   - first:
       213: 4735375665114324730
-    second: Spritesheet_31
+    second: Enemy_Death
   - first:
       213: 7216629191016651444
     second: Spritesheet_32
@@ -193,7 +193,7 @@ TextureImporter:
     second: Spritesheet_62
   - first:
       213: -5195314238524810159
-    second: Projectile
+    second: Pickup_Head
   - first:
       213: 7515378873674563705
     second: Spritesheet_64
@@ -205,7 +205,7 @@ TextureImporter:
     second: Spritesheet_66
   - first:
       213: 1560789844792848569
-    second: Spritesheet_67
+    second: IceClimber_Death
   - first:
       213: -2256940549261426942
     second: Spritesheet_68
@@ -241,7 +241,7 @@ TextureImporter:
     second: Spritesheet_78
   - first:
       213: -7638917396073963669
-    second: Pickup_PowerUp
+    second: Pickup_Powerup
   - first:
       213: -3600998270090919647
     second: Pickup_Life
@@ -346,7 +346,7 @@ TextureImporter:
     second: Spritesheet_113
   - first:
       213: 8981663576921231106
-    second: Spritesheet_114
+    second: GreenBrick
   - first:
       213: -6261122912398265905
     second: Spritesheet_115
@@ -379,10 +379,10 @@ TextureImporter:
     second: Spritesheet_124
   - first:
       213: -9161385159435074326
-    second: Spritesheet_125
+    second: BlueBrick
   - first:
       213: 3919147750717110911
-    second: Pickup_Head
+    second: IceClimber_Projectile
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -472,7 +472,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle
+      name: IceClimber_Idle
       rect:
         serializedVersion: 2
         x: 3
@@ -493,7 +493,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_1
+      name: IceClimber_Walk1
       rect:
         serializedVersion: 2
         x: 19
@@ -514,7 +514,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_2
+      name: IceClimber_Walk2
       rect:
         serializedVersion: 2
         x: 37
@@ -535,7 +535,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_3
+      name: IceClimber_Walk3
       rect:
         serializedVersion: 2
         x: 53
@@ -577,7 +577,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_1
+      name: IceClimber_Attack1
       rect:
         serializedVersion: 2
         x: 86
@@ -598,7 +598,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_6
+      name: IceClimber_Jump1
       rect:
         serializedVersion: 2
         x: 104
@@ -619,7 +619,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_3
+      name: IceClimber_Attack2
       rect:
         serializedVersion: 2
         x: 120
@@ -640,7 +640,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_4
+      name: IceClimber_Attack3
       rect:
         serializedVersion: 2
         x: 145
@@ -661,7 +661,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2
+      name: Spritesheet_9
       rect:
         serializedVersion: 2
         x: 173
@@ -682,7 +682,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_2
+      name: Spritesheet_10
       rect:
         serializedVersion: 2
         x: 196
@@ -871,7 +871,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_19
+      name: IceClimber_Death1
       rect:
         serializedVersion: 2
         x: 349
@@ -892,7 +892,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_20
+      name: IceClimber_Death2
       rect:
         serializedVersion: 2
         x: 365
@@ -1060,7 +1060,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_28
+      name: Enemy_Walk1
       rect:
         serializedVersion: 2
         x: 1
@@ -1081,7 +1081,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_29
+      name: Enemy_Walk2
       rect:
         serializedVersion: 2
         x: 19
@@ -1102,7 +1102,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_30
+      name: Enemy_Walk3
       rect:
         serializedVersion: 2
         x: 38
@@ -1123,7 +1123,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_31
+      name: Enemy_Death
       rect:
         serializedVersion: 2
         x: 52
@@ -1795,10 +1795,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectile
+      name: Pickup_Head
       rect:
         serializedVersion: 2
-        x: 448
+        x: 457
         y: 51
         width: 8
         height: 9
@@ -1879,7 +1879,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_67
+      name: IceClimber_Death
       rect:
         serializedVersion: 2
         x: 494
@@ -2131,7 +2131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pickup_PowerUp
+      name: Pickup_Powerup
       rect:
         serializedVersion: 2
         x: 237
@@ -2866,7 +2866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_114
+      name: GreenBrick
       rect:
         serializedVersion: 2
         x: 29
@@ -3042,7 +3042,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3063,7 +3063,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3084,7 +3084,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3097,7 +3097,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_125
+      name: BlueBrick
       rect:
         serializedVersion: 2
         x: 65
@@ -3105,7 +3105,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3118,15 +3118,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pickup_Head
+      name: IceClimber_Projectile
       rect:
         serializedVersion: 2
-        x: 457
+        x: 448
         y: 51
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

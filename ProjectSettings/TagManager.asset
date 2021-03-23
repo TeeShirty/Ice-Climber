@@ -3,16 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Barrier
+  - PlayerProjectile
+  - TurretProjectile
+  - Powerup
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Enemy
   - 
   - 
   - 
@@ -41,6 +46,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Playarea
-    uniqueID: 1921745809
+  - name: PlayArea
+    uniqueID: 848152591
     locked: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,51 +7,74 @@ using UnityEngine;
 
 public class PlayerFire : MonoBehaviour
 {
-    SpriteRenderer iceClimber;
 
-    public Transform spawnPointRight;
+    SpriteRenderer IceClimberSprite;
+
     public Transform spawnPointLeft;
+    public Transform spawnPointRight;
 
     public float projectileSpeed;
-    public Projectiles projectilePrefab;
+    public PlayerProjectile projectilesPrefab;
+
+    AudioSource fireAudioSource;
+    public AudioClip fireSFX;
 
     // Start is called before the first frame update
     void Start()
     {
-        iceClimber = GetComponent<SpriteRenderer>();
-        
+        IceClimberSprite = GetComponent<SpriteRenderer>();
+
+
         if (projectileSpeed <= 0)
         {
             projectileSpeed = 7.0f;
         }
 
-        if (!spawnPointLeft || !spawnPointRight || !projectilePrefab)
+        if (!spawnPointLeft || !spawnPointRight || !projectilesPrefab)
         {
-            Debug.Log("Unity inspector value to be set");
+            Debug.Log("Unity inspector value is not set");
         }
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Time.timeScale == 1)
         {
-            fireProjectile();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                FireProjectile();
+                if(!fireAudioSource)
+                {
+                    fireAudioSource = gameObject.AddComponent<AudioSource>();
+                    fireAudioSource.clip = fireSFX;
+                    fireAudioSource.loop = false;
+                    fireAudioSource.Play();
+                }
+                else
+                {
+                    fireAudioSource.Play();
+                }
+            }
         }
-    }
+}
 
-    void fireProjectile()
+    private void FireProjectile()
     {
-        if (iceClimber.flipX)
+        if (!IceClimberSprite.flipX)
         {
-            Projectiles projectileInstance = Instantiate(projectilePrefab, spawnPointLeft.position, spawnPointLeft.rotation);
-            projectileInstance.speed = projectileSpeed;
+            Debug.Log("Fire left");
+            PlayerProjectile projectileInstance = Instantiate(projectilesPrefab, spawnPointLeft.position, spawnPointLeft.rotation); //unity function 'instantiate()' will take a refernece to the object or to be created, will take vector 3 position and its rotation
+            projectileInstance.speed = projectileSpeed * -1;
+           
+
         }
         else
         {
-            Projectiles projectileInstance = Instantiate(projectilePrefab, spawnPointRight.position, spawnPointRight.rotation);
-            projectileInstance.speed = projectileSpeed * -1;
+            Debug.Log("Fire Right");
+            PlayerProjectile projectileInstance = Instantiate(projectilesPrefab, spawnPointRight.position, spawnPointRight.rotation); //unity function 'instantiate()' will take a refernece to the object or to be created, will take vector 3 position and its rotation
+            projectileInstance.speed = projectileSpeed;
+            
         }
     }
 }
