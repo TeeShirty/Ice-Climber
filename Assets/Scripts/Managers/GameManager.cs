@@ -98,12 +98,14 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("TitleScreen");
             }
         }
-
-        if (!onHitSound.isPlaying && isHit)
+        if (onHitSound) //checking if it exists to avoid nullreference
         {
-            playerInstance.transform.position = currentLevel.spawnLocation.position;
-            isHit = false;
-            Time.timeScale = 1;
+            if (!onHitSound.isPlaying && isHit)
+            {
+                playerInstance.transform.position = currentLevel.spawnLocation.position;
+                isHit = false;
+                Time.timeScale = 1;
+            }
         }
 
         // Exit Game

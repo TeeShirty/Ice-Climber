@@ -74,11 +74,13 @@ public class EnemyTurret : MonoBehaviour
         {
             anim.SetBool("Fire", false);
         }
-
-        if (!turretOnHitAudio.isPlaying)
+        if (turretOnHitAudio)
         {
-            
-            Destroy(gameObject);
+            if (!turretOnHitAudio.isPlaying)
+            {
+
+                Destroy(gameObject);
+            }
         }
     }
 
