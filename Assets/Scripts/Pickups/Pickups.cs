@@ -36,8 +36,8 @@ public class Pickups : MonoBehaviour
         {
             pickupSound.clip = pickupSFX;
             pickupSound.loop = false;
-            pickupSound.Play();
-            trigger.enabled = false;
+            //pickupSound.Play();
+            //trigger.enabled = false;
         }
         if (!pickupSound.isPlaying && !trigger.enabled)
         {
@@ -56,21 +56,28 @@ public class Pickups : MonoBehaviour
                 case CollectibleType.COLLECTIBLE:
                     Debug.Log("Collectible");
                     //collision.GetComponent<PlayerMovement>().score++;
-                    //pickupSound.Play();
-                    //trigger.enabled = false; //disabling the collision box so that the player passes through it only once.
-                    Destroy(gameObject);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -5000);
+                    pickupSound.Play();
+                    trigger.enabled = false; //disabling the collision box so that the player passes through it only once.
+                    //Destroy(gameObject);
                     break;
 
                 case CollectibleType.POWERUP:
                     Debug.Log("Powerup");
                     collision.GetComponent<PlayerMovement>().StartJumpforceChange();
-                    Destroy(gameObject);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -5000);
+                    pickupSound.Play();
+                    trigger.enabled = false; //disabling the collision box so that the player passes through it only once.
+                    //Destroy(gameObject);
                     break;
 
                 case CollectibleType.LIVES:
                     Debug.Log("Lives");
                     collision.GetComponent<PlayerMovement>().lives++;
-                    Destroy(gameObject);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -5000);
+                    pickupSound.Play();
+                    trigger.enabled = false; //disabling the collision box so that the player passes through it only once.
+                    //Destroy(gameObject);
                     break;
             }
         }

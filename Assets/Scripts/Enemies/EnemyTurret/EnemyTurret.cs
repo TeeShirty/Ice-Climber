@@ -57,7 +57,7 @@ public class EnemyTurret : MonoBehaviour
             //turret follows direction of player
             if (target == true)
             {
-                if (!turretSprite.flipX && GameManager.instance.playerInstance.transform.position.x <= transform.position.x || turretSprite.flipX && GameManager.instance.playerInstance.transform.position.x >= transform.position.x)
+                if (turretSprite.flipX && GameManager.instance.playerInstance.transform.position.x <= transform.position.x || !turretSprite.flipX && GameManager.instance.playerInstance.transform.position.x >= transform.position.x)
                 {
                     turretSprite.flipX = !turretSprite.flipX;
                 }
@@ -74,6 +74,12 @@ public class EnemyTurret : MonoBehaviour
         {
             anim.SetBool("Fire", false);
         }
+
+        if (!turretOnHitAudio.isPlaying)
+        {
+            
+            Destroy(gameObject);
+        }
     }
 
     public void Fire()
@@ -83,12 +89,12 @@ public class EnemyTurret : MonoBehaviour
         {
 
             PlayerProjectile temp = Instantiate(projectilePrefab, projectileSpawnPointLeft.position, projectileSpawnPointLeft.rotation);
-            temp.speed = projectileForce * -1;
+            temp.speed = projectileForce;
         }
         else
         {
             PlayerProjectile temp = Instantiate(projectilePrefab, projectileSpawnPointRight.position, projectileSpawnPointRight.rotation);
-            temp.speed = projectileForce;
+            temp.speed = projectileForce * -1;
         }
     }
 
@@ -107,13 +113,15 @@ public class EnemyTurret : MonoBehaviour
             Destroy(collision.gameObject);
             if (health <= 0)
             {
-                
+                anim.SetBool("Death", true);
                 turretOnHitAudio = gameObject.AddComponent<AudioSource>();
                 turretOnHitAudio.clip = turretOnHitSFX;
                 turretOnHitAudio.loop = false;
                 turretOnHitAudio.Play();
-                
-                Destroy(gameObject);
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -5000);
+
+
+                //Destroy(gameObject);
             }
         }
     }
