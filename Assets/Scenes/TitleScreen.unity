@@ -369,6 +369,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   mainMenu: {fileID: 888744637}
   settingsMenu: {fileID: 1642445249}
+  levelCompleteMenu: {fileID: 0}
   livesText: {fileID: 0}
   volumeText: {fileID: 300469094}
   volumeSlider: {fileID: 1537863955}
@@ -1693,6 +1694,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1476015692582650838, guid: a92380dcb1debe14faf5c5d224f70327, type: 3}
+      propertyPath: onHitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 31a8be13379529c48a613c323b1d5a15, type: 3}
     - target: {fileID: 1476015692582650839, guid: a92380dcb1debe14faf5c5d224f70327, type: 3}
       propertyPath: m_Name
       value: GameManager
