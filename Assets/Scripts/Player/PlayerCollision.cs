@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(PlayerMovement))]
 
@@ -10,6 +11,7 @@ public class PlayerCollision : MonoBehaviour
     PlayerMovement pm;
 
     public float bounceForce;
+    public GameObject levelCompleteBox;
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +44,17 @@ public class PlayerCollision : MonoBehaviour
             Destroy(collision.gameObject);
             //if lives are > 0 then respawn player nad level
         }
-        
 
-    }
+        if(collision.gameObject.tag == "EndGame")
+        {
+            if (SceneManager.GetActiveScene().name == "Level")
+            {
+                SceneManager.LoadScene("levelCompleteScreen");
+                Time.timeScale = 0f;
+            }
+        }
+    }        
+
     // Update is called once per frame
     void Update()
     {

@@ -9,6 +9,7 @@ TagManager:
   - PlayerProjectile
   - TurretProjectile
   - Powerup
+  - EndGame
   layers:
   - Default
   - TransparentFX

@@ -166,6 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   speed: 0
+  sealOnHitSFX: {fileID: 8300000, guid: 38c90a0bd6cdebf44b9e600b9b80b3ca, type: 3}
 --- !u!1 &8238749161882191061
 GameObject:
   m_ObjectHideFlags: 0

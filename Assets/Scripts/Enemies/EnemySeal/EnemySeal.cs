@@ -16,6 +16,8 @@ public class EnemySeal : MonoBehaviour
     public int health;
     public float speed;
 
+    AudioSource sealOnHitAudio;
+    public AudioClip sealOnHitSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,17 @@ public class EnemySeal : MonoBehaviour
         if (health <= 0)
         {
             anim.SetBool("Death", true);
+            if (!sealOnHitAudio)
+            {
+                sealOnHitAudio = gameObject.AddComponent<AudioSource>();
+                sealOnHitAudio.clip = sealOnHitSFX;
+                sealOnHitAudio.loop = false;
+                sealOnHitAudio.Play();
+            }
+            else
+            {
+                sealOnHitAudio.Play();
+            }
             rb.velocity = Vector2.zero; //so the dead enemy stops moving
             finishedDeath();
 

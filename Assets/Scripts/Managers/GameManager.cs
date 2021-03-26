@@ -93,6 +93,10 @@ public class GameManager : MonoBehaviour
             {
                 SceneManager.LoadScene("TitleScreen");
             }
+            else if (SceneManager.GetActiveScene().name == "LevelCompleteScreen")
+            {
+                SceneManager.LoadScene("TitleScreen");
+            }
         }
 
         if (!onHitSound.isPlaying && isHit)

@@ -126,6 +126,7 @@ MonoBehaviour:
   aggroDistance: 7
   projectileFireRate: 1.5
   health: 5
+  turretOnHitSFX: {fileID: 8300000, guid: 9d021389cc345194a9d802084d6b426a, type: 3}
 --- !u!61 &5003643
 BoxCollider2D:
   m_ObjectHideFlags: 0

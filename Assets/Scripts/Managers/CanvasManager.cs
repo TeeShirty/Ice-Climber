@@ -18,6 +18,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject mainMenu;
     public GameObject settingsMenu;
+    public GameObject levelCompleteMenu;
 
     [Header("Text")]
     public Text livesText;
@@ -29,6 +30,7 @@ public class CanvasManager : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
 
+    [Header("Audio")]
     AudioSource pauseAudio;
     public AudioClip pauseSound;
 
@@ -101,8 +103,7 @@ public class CanvasManager : MonoBehaviour
                 }
             }
         }
-
-
+       
         if (settingsMenu == true)
         {
             if (settingsMenu.activeSelf)

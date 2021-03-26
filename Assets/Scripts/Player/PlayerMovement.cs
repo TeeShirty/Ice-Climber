@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         //Establishing some checks
         if (speed <= 0)
         {
-            speed = 5.0f; //all float values need to end with 'f' as all decimal values are doubles
+            speed = 3.0f; //all float values need to end with 'f' as all decimal values are doubles
         }
 
         if (jumpForce <= 0)

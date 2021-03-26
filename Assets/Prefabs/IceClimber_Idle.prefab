@@ -121,8 +121,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963342755224976291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.028604269, y: -2.2372067, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0324, y: -2.2372067, z: 0}
+  m_LocalScale: {x: 0.9912, y: 1, z: 1}
   m_Children:
   - {fileID: 111048051143648185}
   - {fileID: 1295321593}
@@ -300,3 +300,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 0
+  levelCompleteBox: {fileID: 1410045782484437719, guid: 0f23119c31b826344a5ef82057d9aac9, type: 3}

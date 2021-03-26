@@ -26,20 +26,24 @@ public class Pickups : MonoBehaviour
     {
         pickupSound = GetComponent<AudioSource>();
         trigger = GetComponent<BoxCollider2D>();
-        if(pickupSound)
-        {
-            pickupSound.clip = pickupSFX;
-            pickupSound.loop = false;
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!pickupSound.isPlaying && !trigger.enabled)
+        if (!pickupSound)
+        {
+            pickupSound.clip = pickupSFX;
+            pickupSound.loop = false;
+            pickupSound.Play();
+            trigger.enabled = false;
+        }
+        if (!pickupSound.isPlaying && !trigger.enabled)
         {
             Destroy(gameObject);
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,8 +56,8 @@ public class Pickups : MonoBehaviour
                 case CollectibleType.COLLECTIBLE:
                     Debug.Log("Collectible");
                     //collision.GetComponent<PlayerMovement>().score++;
-                    pickupSound.Play();
-                    trigger.enabled = false; //disabling the collision box so that the player passes through it only once.
+                    //pickupSound.Play();
+                    //trigger.enabled = false; //disabling the collision box so that the player passes through it only once.
                     Destroy(gameObject);
                     break;
 

@@ -25,6 +25,9 @@ public class EnemyTurret : MonoBehaviour
     Animator anim;
     SpriteRenderer turretSprite;
 
+    AudioSource turretOnHitAudio;
+    public AudioClip turretOnHitSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -104,6 +107,12 @@ public class EnemyTurret : MonoBehaviour
             Destroy(collision.gameObject);
             if (health <= 0)
             {
+                
+                turretOnHitAudio = gameObject.AddComponent<AudioSource>();
+                turretOnHitAudio.clip = turretOnHitSFX;
+                turretOnHitAudio.loop = false;
+                turretOnHitAudio.Play();
+                
                 Destroy(gameObject);
             }
         }
